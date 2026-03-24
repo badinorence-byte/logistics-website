@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FastTrack Logistics</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+}
+
+header {
+    background: #0d47a1;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background: #1565c0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tracking input {
+    padding: 10px;
+    width: 200px;
+}
+
+.tracking button {
+    padding: 10px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+}
+
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>FastTrack Logistics</h1>
+    <p>Reliable Delivery Solutions</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#tracking">Track</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Fast & Secure Delivery</h2>
+    <p>Your packages, our priority</p>
+</section>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Local Delivery</h3>
+            <p>Same-day delivery within your city.</p>
+        </div>
+        <div class="card">
+            <h3>International Shipping</h3>
+            <p>Ship worldwide with ease.</p>
+        </div>
+        <div class="card">
+            <h3>Warehouse Storage</h3>
+            <p>Secure and reliable storage solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tracking" class="section tracking">
+    <h2>Track Your Shipment</h2>
+    <input type="text" id="trackingNumber" placeholder="Enter Tracking Number">
+    <button onclick="trackPackage()">Track</button>
+    <p id="result"></p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: support@fasttrack.com</p>
+    <p>Phone: +63 912 345 6789</p>
+</section>
+
+<footer>
+    <p>© 2026 FastTrack Logistics</p>
+</footer>
+
+<script>
+function trackPackage() {
+    let input = document.getElementById("trackingNumber").value;
+    let result = document.getElementById("result");
+
+    if(input === "") {
+        result.innerHTML = "Please enter a tracking number.";
+    } else {
+        result.innerHTML = "Tracking ID " + input + ": In Transit 🚚";
+    }
+}
+</script>
+
+</body>
+</html>
